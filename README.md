@@ -3,12 +3,12 @@
 
 # 使用方法
 ```shell
-显示可能出现内存泄漏的地址块: ./mem_leak.sh show pid
+显示可能出现内存泄漏的地址块: ./memleak.sh show pid
 
-dump内存到当前目录下: ./mem_leak.sh dump pid addr
+dump内存到当前目录下: ./memleak.sh dump pid addr
 ```
 ## 泄漏内存地址检测
-假设JVM进程pid为11983，命令行执行：`./mem_leak.sh show 11983`，输出如下：
+假设JVM进程pid为11983，命令行执行：`./memleak.sh show 11983`，输出如下：
 ```
 00007f2824000000   19396   19396   19396 rw---   [ anon ]
 00007f28252f1000   46140       0       0 -----   [ anon ]
@@ -30,7 +30,7 @@ dump内存到当前目录下: ./mem_leak.sh dump pid addr
 根据这里的内存块地址比如：00007f2824000000， 可以用下面的内存dump得到内存块里的内容进一步分析。
 
 ## 内存dump
-命令行执行：`./mem_leak.sh dump 11983 00007f2824000000`，输出如下：
+命令行执行：`./memleak.sh dump 11983 00007f2824000000`，输出如下：
 ```
 Dump文件已输出至: ./11983_mem_7f2964000000.bin
 ```
