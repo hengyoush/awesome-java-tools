@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ $# -ne 2 ]; then
-    echo "Usage: $0 <Java_PID> <N>"
+    echo "Usage: $0 <Java_PID> <Number of Threads>"
     exit 1
 fi
 
